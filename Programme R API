@@ -1,0 +1,16 @@
+library(httr)
+library(jsonlite)
+library(shiny)
+
+base <- 'https://api.jcdecaux.com/vls/v1/stations?'
+contract <- "Lyon"
+info_key <- "5db5dc954e638d987c2d1a75435ba752fe4445e6"
+
+
+API_URL <- paste0(base, "contract=", contract, "&apiKey=",info_key )
+
+GET(API_URL)
+
+
+  # La clef obtenu sur JCDecaux est : 5db5dc954e638d987c2d1a75435ba752fe4445e6
+  # L'URL de l'API est : https://api.jcdecaux.com/vls/v1/stations?
